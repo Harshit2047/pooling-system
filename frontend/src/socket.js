@@ -1,10 +1,10 @@
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5001", {
+const socket = io("https://pooling-system-grwl.onrender.com", {
     transports: ["polling", "websocket"],
     withCredentials: true,
     cors: {
-        origin: "http://localhost:5173",
+        origin: "https://pooling-system-delta.vercel.app",
         methods: ["GET", "POST"],
         credentials: true
     }

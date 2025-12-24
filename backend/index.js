@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:3000", "http://localhost:4173"],
+    origin: ["https://pooling-system-delta.vercel.app", "http://localhost:3000", "http://localhost:4173"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
@@ -23,7 +23,7 @@ app.use(express.json());
 
 const io = new Server(server, {
     cors: {
-        origin: ["http://localhost:5173", "http://localhost:3000", "http://localhost:4173"],
+        origin: ["https://pooling-system-delta.vercel.app", "http://localhost:3000", "http://localhost:4173"],
         methods: ["GET", "POST"],
         credentials: true,
         allowedHeaders: ["Content-Type", "Authorization"]
